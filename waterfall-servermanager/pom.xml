@@ -24,6 +24,19 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <repositories>
+        <!-- Lombok -->
+        <repository>
+            <id>projectlombok.org</id>
+            <url>https://projectlombok.org/mavenrepo</url>
+        </repository>
+        <!-- Paper + Waterfall -->
+        <repository>
+            <id>papermc</id>
+            <url>https://papermc.io/repo/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- Lombok -->
         <dependency>
