@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.platzhaltergaming.commonlib</groupId>
-    <artifactId>CommonLib</artifactId>
+    <artifactId>commonlib</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -13,8 +13,8 @@
     </properties>
 
     <modules>
-        <module>Common</module>
-        <module>Messages</module>
+        <module>common</module>
+        <module>messages</module>
     </modules>
     <packaging>pom</packaging>
 

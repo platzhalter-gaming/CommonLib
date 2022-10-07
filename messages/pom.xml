@@ -4,11 +4,11 @@
 
     <parent>
         <groupId>net.platzhaltergaming.commonlib</groupId>
-        <artifactId>CommonLib</artifactId>
+        <artifactId>commonlib</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>Messages</artifactId>
+    <artifactId>messages</artifactId>
     <version>1.3.0</version>
 
     <properties>
