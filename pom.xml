@@ -48,11 +48,5 @@
             <url>https://maven.pkg.github.com/platzhalter-gaming/CommonLib</url>
             <layout>default</layout>
         </repository>
-        <snapshotRepository>
-            <id>github</id>
-            <name>GitHub platzhalter-gaming Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/platzhalter-gaming/CommonLib</url>
-            <layout>default</layout>
-        </snapshotRepository>
     </distributionManagement>
 </project>
