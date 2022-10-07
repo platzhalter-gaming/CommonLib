@@ -1,5 +1,6 @@
 package net.platzhaltergaming.commonlib;
 
+import java.util.Enumeration;
 import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.RequiredArgsConstructor;
@@ -13,14 +14,26 @@ public class Cooldown<T> {
 
     public long check(T key) {
         if (entries.containsKey(key)) {
-            long milliSecondsLeft = (entries.get(key) + this.cooldown) - System.currentTimeMillis();
+            long milliSecondsLeft = (entries.get(key) + cooldown) - System.currentTimeMillis();
             if (milliSecondsLeft > 0) {
                 return milliSecondsLeft / 1000;
             }
         }
 
-        this.remove(key);
+        remove(key);
         return 0;
+    }
+
+    public long check(T key, long leeway) {
+        long left = check(key);
+
+        // If the time left is in the leeway, we are good to go
+        // remove the key
+        if (left <= leeway) {
+            this.remove(key);
+            return 0;
+        }
+        return left;
     }
 
     public boolean has(T key) {
@@ -33,6 +46,10 @@ public class Cooldown<T> {
 
     public void remove(T key) {
         entries.remove(key);
+    }
+
+    public Enumeration<T> keys() {
+        return entries.keys();
     }
 
 }
